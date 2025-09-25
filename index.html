@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Dashboard - Internship Platform</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        .dashboard-selection-page {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #FF7A00 0%, #FF9500 50%, #FFB000 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .dashboard-selection-page::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 200" fill="rgba(255,255,255,0.1)"><polygon points="0,0 1000,100 1000,200 0,200"/></svg>');
+            background-size: cover;
+        }
+
+        .selection-container {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 1000px;
+            width: 100%;
+        }
+
+        .selection-header {
+            color: white;
+            margin-bottom: 3rem;
+        }
+
+        .selection-header h1 {
+            font-size: 3rem;
+            margin: 0 0 1rem;
+            font-weight: 700;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .selection-header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin: 0;
+        }
+
+        .dashboard-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .dashboard-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2.5rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            transition: all 0.4s ease;
+            border: 3px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .dashboard-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(255, 122, 0, 0.05), rgba(255, 149, 0, 0.05));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .dashboard-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+            border-color: #FF7A00;
+        }
+
+        .dashboard-card:hover::before {
+            opacity: 1;
+        }
+
+        .card-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #FF7A00, #FF9500);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+            margin: 0 auto 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .dashboard-card:hover .card-icon {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .card-content h2 {
+            font-size: 1.8rem;
+            margin: 0 0 1rem;
+            color: #333;
+            font-weight: 600;
+        }
+
+        .card-content p {
+            color: #666;
+            line-height: 1.6;
+            margin: 0 0 1.5rem;
+        }
+
+        .card-features {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 2rem;
+        }
+
+        .card-features li {
+            padding: 0.5rem 0;
+            color: #555;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .card-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #FF7A00;
+            font-weight: bold;
+        }
+
+        .card-button {
+            background: linear-gradient(135deg, #FF7A00, #FF9500);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .card-button:hover {
+            background: linear-gradient(135deg, #FF9500, #FFB000);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 122, 0, 0.4);
+        }
+
+        .back-to-home {
+            margin-top: 2rem;
+        }
+
+        .back-to-home a {
+            color: white;
+            text-decoration: none;
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+            font-weight: 500;
+        }
+
+        .back-to-home a:hover {
+            opacity: 1;
+        }
+
+        @media (max-width: 768px) {
+            .selection-header h1 {
+                font-size: 2rem;
+            }
+            
+            .dashboard-cards {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .dashboard-card {
+                padding: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard-selection-page">
+        <div class="selection-container">
+            <div class="selection-header">
+                <h1>Welcome to AvsarAI</h1>
+                <p>Choose your access level to get started with the internship platform</p>
+            </div>
+
+            <div class="dashboard-cards">
+                <!-- Student Dashboard Card -->
+                <div class="dashboard-card" onclick="location.href='main-website.html'">
+                    <div class="card-icon">👨‍🎓</div>
+                    <div class="card-content">
+                        <h2>Student Dashboard</h2>
+                        <p>Access your personalized internship journey, profile management, and application tracking.</p>
+                        <ul class="card-features">
+                            <li>Browse and apply for internships</li>
+                            <li>AI-powered profile analysis</li>
+                            <li>Skills and experience tracking</li>
+                            <li>Application status monitoring</li>
+                            <li>Personalized recommendations</li>
+                        </ul>
+                        <a href="main-website.html" class="card-button">Access Student Portal</a>
+                    </div>
+                </div>
+
+                <!-- Admin Dashboard Card -->
+                <div class="dashboard-card" onclick="location.href='admin-dashboard.html'">
+                    <div class="card-icon">👨‍💼</div>
+                    <div class="card-content">
+                        <h2>Admin Dashboard</h2>
+                        <p>Comprehensive management tools for overseeing the entire internship ecosystem.</p>
+                        <ul class="card-features">
+                            <li>Real-time analytics and metrics</li>
+                            <li>Student and company management</li>
+                            <li>Application monitoring system</li>
+                            <li>Skill gap analysis reports</li>
+                            <li>Platform administration tools</li>
+                        </ul>
+                        <a href="admin-dashboard.html" class="card-button">Access Admin Portal</a>
+                    </div>
+                </div>
+            </div>
+
+
+    <script>
+        // Add animation on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.dashboard-card');
+            cards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(30px)';
+                
+                setTimeout(() => {
+                    card.style.transition = 'all 0.6s ease';
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, index * 200);
+            });
+
+            // Initialize UX4G Map if container exists
+            if (document.getElementById('ux4g-map')) {
+                initializeMap();
+            }
+        });
+
+        // UX4G Map initialization function
+        function initializeMap() {
+            if (typeof UX4Gmap !== 'undefined') {
+                const mapChart = UX4Gmap.mapChart({
+                    container: 'ux4g-map',
+                    type: 'india',
+                    height: 400,
+                    width: '100%',
+                    backgroundColor: 'transparent',
+                    stroke: '#FF7A00',
+                    strokeWidth: 1,
+                    fill: '#FFB366',
+                    hoverFill: '#FF7A00',
+                    data: {
+                        'Andhra Pradesh': { value: 850, color: '#FF9D42' },
+                        'Karnataka': { value: 1250, color: '#FF7A00' },
+                        'Maharashtra': { value: 980, color: '#FF8C2E' },
+                        'Tamil Nadu': { value: 720, color: '#FFB366' },
+                        'Telangana': { value: 640, color: '#FFCC99' }
+                    }
+                });
+            } else {
+                // Fallback if UX4G is not loaded
+                const mapContainer = document.getElementById('ux4g-map');
+                if (mapContainer) {
+                    mapContainer.innerHTML = '<div style="height: 400px; display: flex; align-items: center; justify-content: center; background: rgba(255, 122, 0, 0.1); border-radius: 8px; color: #FF7A00; text-align: center;"><div><p>India Map</p><p style="font-size: 0.9rem; margin-top: 0.5rem;">Interactive map loading...</p></div></div>';
+                }
+            }
+        }
+    </script>
+</body>
+</html>

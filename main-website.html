@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internship Platform - Unlock Your Potential</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- UX4G Map CDN -->
+    <script src="https://cdn.ux4g.gov.in/UX4G@2.0.8/js/ux4g-map.js"></script>
+    <script src="https://cdn.ux4g.gov.in/UX4G@2.0.8/js/ux4g-map-all.js"></script>
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="main-website.html" class="nav-link active">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="profile.html" class="nav-link">Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="my-journey.html" class="nav-link">My Journey</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link">About Us</a>
+                    </li>
+                </ul>
+                <div class="nav-actions">
+                    <button class="btn btn-secondary">Sign In</button>
+                    <button class="btn btn-orange">Sign Up</button>
+                </div>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section with Map -->
+        <section id="home" class="hero-section">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1 class="hero-title">Unlock Your Potential with Impactful Internships</h1>
+                        <p class="hero-subtitle">Discover thousands of internship opportunities across India, designed to kickstart your career and provide invaluable experience. Your journey starts here.</p>
+                        <button class="btn btn-orange" onclick="window.location.href='my-journey.html'">Explore Opportunities</button>
+                    </div>
+                    <div class="hero-map">
+                        <div id="ux4g-map"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Impact Numbers Section -->
+        <section class="impact-section">
+            <div class="container">
+                <h2 class="section-title">Our impact in numbers</h2>
+                <div class="impact-grid">
+                    <div class="impact-card">
+                        <div class="impact-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
+                                <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="#FF7A00" stroke-width="2" stroke-linejoin="round"/>
+                                <path d="M2 17L12 22L22 17" stroke="#FF7A00" stroke-width="2" stroke-linejoin="round"/>
+                                <path d="M2 12L12 17L22 12" stroke="#FF7A00" stroke-width="2" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3>118K+</h3>
+                        <p>Internship Opportunities</p>
+                    </div>
+                    <div class="impact-card">
+                        <div class="impact-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
+                                <path d="M3 9L12 2L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z" stroke="#FF7A00" stroke-width="2" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3>25</h3>
+                        <p>Diverse Sectors</p>
+                    </div>
+                    <div class="impact-card">
+                        <div class="impact-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
+                                <path d="M21 10C21 17 12 23 12 23S3 17 3 10C3 7.61305 3.94821 5.32387 5.63604 3.63604C7.32387 1.94821 9.61305 1 12 1C14.3869 1 16.6761 1.94821 18.3639 3.63604C20.0518 5.32387 21 7.61305 21 10Z" stroke="#FF7A00" stroke-width="2"/>
+                                <circle cx="12" cy="10" r="3" stroke="#FF7A00" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h3>36</h3>
+                        <p>States/UTs Covered</p>
+                    </div>
+                    <div class="impact-card">
+                        <div class="impact-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
+                                <path d="M3 9L12 2L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z" stroke="#FF7A00" stroke-width="2" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3>734</h3>
+                        <p>Districts Engaged</p>
+                    </div>
+                    <div class="impact-card">
+                        <div class="impact-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
+                                <path d="M22 10V6C22 5.46957 21.7893 4.96086 21.4142 4.58579C21.0391 4.21071 20.5304 4 20 4H4C3.46957 4 2.96086 4.21071 2.58579 4.58579C2.21071 4.96086 2 5.46957 2 6V10C3.10457 10 4 10.8954 4 12C4 13.1046 3.10457 14 2 14V18C2 18.5304 2.21071 19.0391 2.58579 19.4142C2.96086 19.7893 3.46957 20 4 20H20C20.5304 20 21.0391 19.7893 21.4142 19.4142C21.7893 19.0391 22 18.5304 22 18V14C20.8954 14 20 13.1046 20 12C20 10.8954 20.8954 10 22 10Z" stroke="#FF7A00" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h3>5</h3>
+                        <p>Internship Opportunities</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Eligibility Section -->
+        <section class="eligibility-section">
+            <div class="container">
+                <h2 class="section-title">Don't know your <span class="highlight">eligibility?</span></h2>
+                <div class="eligibility-grid">
+                    <div class="eligibility-card">
+                        <div class="eligibility-icon">
+                            <svg width="50" height="50" viewBox="0 0 24 24" fill="none">
+                                <circle cx="12" cy="12" r="10" stroke="#FF7A00" stroke-width="2"/>
+                                <polyline points="12,6 12,12 16,14" stroke="#FF7A00" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h3>AGE</h3>
+                        <p>18-24 Years old</p>
+                    </div>
+                    <div class="eligibility-card">
+                        <div class="eligibility-icon">
+                            <svg width="50" height="50" viewBox="0 0 24 24" fill="none">
+                                <path d="M2 3H8C9.06087 3 10.0783 3.42143 10.8284 4.17157C11.5786 4.92172 12 5.93913 12 7V21C12 20.2044 11.6839 19.4413 11.1213 18.8787C10.5587 18.3161 9.79565 18 9 18H2V3Z" stroke="#FF7A00" stroke-width="2"/>
+                                <path d="M22 3H16C14.9391 3 13.9217 3.42143 13.1716 4.17157C12.4214 4.92172 12 5.93913 12 7V21C12 20.2044 12.3161 19.4413 12.8787 18.8787C13.4413 18.3161 14.2044 18 15 18H22V3Z" stroke="#FF7A00" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h3>Education</h3>
+                        <p>Not enrolled in a full-time educational program.</p>
+                    </div>
+                    <div class="eligibility-card">
+                        <div class="eligibility-icon">
+                            <svg width="50" height="50" viewBox="0 0 24 24" fill="none">
+                                <path d="M16 4C18.175 4.01247 20.2544 4.87644 21.8306 6.45262C23.4068 8.0288 24.2708 10.1082 24.2833 12.2833" stroke="#FF7A00" stroke-width="2"/>
+                                <path d="M12 8C13.0609 8 14.0783 8.42143 14.8284 9.17157C15.5786 9.92172 16 10.9391 16 12" stroke="#FF7A00" stroke-width="2"/>
+                                <circle cx="12" cy="12" r="4" stroke="#FF7A00" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h3>Family Income & Status</h3>
+                        <ul>
+                            <li>No one in the family is earning more than ₹6 LPA.</li>
+                            <li>No family member holds a Govt. Job.</li>
+                        </ul>
+                    </div>
+                    <div class="eligibility-card">
+                        <div class="eligibility-icon">
+                            <svg width="50" height="50" viewBox="0 0 24 24" fill="none">
+                                <path d="M20 21V19C20 17.9391 19.5786 16.9217 18.8284 16.1716C18.0783 15.4214 17.0609 15 16 15H8C6.93913 15 5.92172 15.4214 5.17157 16.1716C4.42143 16.9217 4 17.9391 4 19V21" stroke="#FF7A00" stroke-width="2"/>
+                                <circle cx="12" cy="7" r="4" stroke="#FF7A00" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h3>Job Status</h3>
+                        <p>Not currently employed full-time.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Internship Platform</h3>
+                    <p>Connecting talent with opportunities across India through innovative technology solutions.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#profile">Profile</a></li>
+                        <li><a href="#journey">My Journey</a></li>
+                        <li><a href="#about">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: support@internships.gov.in</p>
+                    <p>Phone: +91 11123 45678</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Internship Platform. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Login/Signup Modal -->
+    <div id="authModal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <div class="modal-form">
+                <h2 id="modalTitle">Sign In</h2>
+                <form id="authForm">
+                    <div class="form-group">
+                        <input type="text" id="username" placeholder="Username" required>
+                    </div>
+                    <div class="form-group password-field">
+                        <input type="password" id="password" placeholder="Password" required>
+                        <button type="button" class="password-toggle" onclick="togglePassword('password')">👁️</button>
+                    </div>
+                    <div class="form-group password-field" id="confirmPasswordGroup" style="display: none;">
+                        <input type="password" id="confirmPassword" placeholder="Confirm Password">
+                        <button type="button" class="password-toggle" onclick="togglePassword('confirmPassword')">👁️</button>
+                    </div>
+                    <button type="submit" class="btn btn-orange modal-submit">Login/Sign Up</button>
+                </form>
+                <p class="modal-terms">
+                    By using our service, you agree to these terms. You are responsible for your account and content. We are not liable for any damages or losses. This agreement is non-transferable.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script>
+        // Initialize UX4G Map
+        document.addEventListener('DOMContentLoaded', function() {
+            try {
+                console.log('Initializing UX4G map...');
+                
+                // Wait for UX4G library to load
+                setTimeout(() => {
+                    if (typeof UX4Gmap !== 'undefined') {
+                        console.log('UX4G library found, creating map...');
+                        
+                        // Map data with internship opportunities by state
+                        const indiaMapData = [
+                            ['in-py', 45], ['in-ld', 12], ['in-wb', 234], 
+                            ['in-or', 123], ['in-br', 178], ['in-sk', 23],
+                            ['in-ct', 145], ['in-tn', 567], ['in-mp', 234], 
+                            ['in-2984', 89], ['in-ga', 67], ['in-nl', 34], 
+                            ['in-mn', 56], ['in-ar', 78], ['in-mz', 45],
+                            ['in-tr', 67], ['in-3464', 23], ['in-dl', 890], 
+                            ['in-hr', 234], ['in-ch', 156], ['in-hp', 145], 
+                            ['in-jk', 178], ['in-kl', 345], 
+                            ['in-ka', 1250], ['in-dn', 34],
+                            ['in-mh', 980], ['in-as', 134], 
+                            ['in-ap', 456], ['in-ml', 78], ['in-pb', 234],
+                            ['in-rj', 345], ['in-up', 678], ['in-ut', 134], 
+                            ['in-jh', 234], ['in-tg', 567], ['in-gj', 345]
+                        ];
+
+                        // Create the map
+                        UX4Gmap.mapChart('ux4g-map', {
+                            chart: {
+                                map: 'countries/in/in-all',
+                                height: 400
+                            },
+                            title: { text: '' },
+                            subtitle: { text: '' },
+                            legend: { 
+                                enabled: true,
+                                align: 'right',
+                                layout: 'vertical',
+                                floating: true,
+                                backgroundColor: 'rgba(255,255,255,0.9)',
+                                borderRadius: 6
+                            },
+                            colorAxis: {
+                                min: 0,
+                                max: 1300,
+                                stops: [
+                                    [0, '#FFE4D1'],      // Very light orange
+                                    [0.3, '#FFD1B3'],    // Light orange
+                                    [0.6, '#FFB380'],    // Medium orange  
+                                    [1, '#FF7A00']       // Deep orange
+                                ]
+                            },
+                            tooltip: {
+                                useHTML: true,
+                                headerFormat: '',
+                                pointFormat: '<div style="color: white; background-color: #FF7A00; padding: 8px 12px; border-radius: 6px; font-size: 12px; font-weight: 500;">' +
+                                           '<strong>{point.name}</strong><br>' +
+                                           'Internships: {point.value}<br>' +
+                                           'Growth: +18%' +
+                                           '</div>',
+                                backgroundColor: null,
+                                borderWidth: 0,
+                                shadow: false
+                            },
+                            navigation: {
+                                buttonOptions: { enabled: false }
+                            },
+                            credits: { enabled: false },
+                            series: [{
+                                data: indiaMapData,
+                                name: 'Internship Opportunities',
+                                allowPointSelect: true,
+                                cursor: 'pointer',
+                                borderColor: '#FFFFFF',
+                                borderWidth: 0.5,
+                                states: {
+                                    hover: {
+                                        borderColor: '#FF5500',
+                                        borderWidth: 2
+                                    }
+                                }
+                            }]
+                        });
+
+                        console.log('Map successfully created!');
+                        
+                    } else {
+                        console.warn('UX4G library not loaded, showing fallback...');
+                        showMapFallback();
+                    }
+                }, 1500);
+                
+            } catch (error) {
+                console.error('Map initialization failed:', error);
+                showMapFallback();
+            }
+        });
+
+        function showMapFallback() {
+            const mapContainer = document.getElementById('ux4g-map');
+            if (mapContainer) {
+                mapContainer.innerHTML = `
+                    <div style="
+                        width: 100%;
+                        height: 400px;
+                        background: linear-gradient(135deg, #FFB366 0%, #FF7A00 100%);
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 15px;
+                        color: white;
+                        font-size: 18px;
+                        font-weight: 600;
+                        text-align: center;
+                        box-shadow: 0 10px 30px rgba(255, 122, 0, 0.3);
+                    ">
+                        <div>
+                            <div style="font-size: 48px; margin-bottom: 10px;">🇮🇳</div>
+                            <div style="font-size: 24px; margin-bottom: 8px;">Discover Internships Across India</div>
+                            <div style="font-size: 16px; opacity: 0.9;">118,000+ opportunities in 36 states & union territories</div>
+                        </div>
+                    </div>
+                `;
+            }
+        }
+    </script>
+</body>
+</html>

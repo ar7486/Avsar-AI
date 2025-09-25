@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Journey - Internship Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- UX4G Map CDN -->
+    <script src="https://cdn.ux4g.gov.in/UX4G@2.0.8/js/ux4g-map.js"></script>
+    <script src="https://cdn.ux4g.gov.in/UX4G@2.0.8/js/ux4g-map-all.js"></script>
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="profile.html" class="nav-link">Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="my-journey.html" class="nav-link active">My Journey</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link">About Us</a>
+                    </li>
+                </ul>
+                <div class="nav-actions">
+                    <button class="btn btn-secondary">Sign In</button>
+                    <button class="btn btn-orange">Sign Up</button>
+                </div>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- AI Resume Helper Section -->
+        <section class="resume-section">
+            <div class="container">
+                <h1 class="page-title">My Journey</h1>
+                <div class="resume-content">
+                    <div class="sidebar">
+                        <div class="ai-helper-card">
+                            <h3>AI resume helper</h3>
+                            <p>Upload your resume to get instant, AI-powered feedback on how to improve it for top internship roles.</p>
+                            <button class="btn btn-orange">Analyse resume</button>
+                        </div>
+                        <div class="bookmarks-card">
+                            <h3>My Bookmarks</h3>
+                            <div class="bookmark-indicator"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="main-content-area">
+                        <div class="search-bar">
+                            <input type="text" placeholder="Search Internships...">
+                        </div>
+                        
+                        <h2>Recommended Internships</h2>
+                        
+                        <div class="internship-cards">
+                            <div class="internship-card">
+                                <div class="company-logo orange"></div>
+                                <div class="internship-details">
+                                    <h3>Product management intern</h3>
+                                    <p class="company">Tech Solutions Inc • Bhopal, MP</p>
+                                    <div class="skills">
+                                        <span class="skill-tag">Product Strategy</span>
+                                        <span class="skill-tag">Marketing Research</span>
+                                        <span class="skill-tag">Agile</span>
+                                    </div>
+                                    <div class="actions">
+                                        <button class="btn btn-orange">Apply Now</button>
+                                        <button class="btn btn-secondary">Analyze Internship</button>
+                                    </div>
+                                </div>
+                                <div class="skill-match">
+                                    <div class="match-score">88%</div>
+                                    <div class="match-label">Skill Match</div>
+                                </div>
+                            </div>
+
+                            <div class="internship-card">
+                                <div class="company-logo orange"></div>
+                                <div class="internship-details">
+                                    <h3>AI/ML PM Intern</h3>
+                                    <p class="company">Kartikma Tech • Remote</p>
+                                    <div class="skills">
+                                        <span class="skill-tag">Machine Learning</span>
+                                        <span class="skill-tag">Data Analysis</span>
+                                        <span class="skill-tag">Product Roadmap</span>
+                                    </div>
+                                    <div class="actions">
+                                        <button class="btn btn-orange">Apply Now</button>
+                                        <button class="btn btn-secondary">Analyze Internship</button>
+                                        <button class="btn btn-secondary">All Resumes</button>
+                                    </div>
+                                </div>
+                                <div class="skill-match">
+                                    <div class="match-score">80%</div>
+                                    <div class="match-label">Skill Match</div>
+                                </div>
+                            </div>
+
+                            <div class="internship-card">
+                                <div class="company-logo orange"></div>
+                                <div class="internship-details">
+                                    <h3>Junior Product Manager</h3>
+                                    <p class="company">Pragati Inc ltd • Lucknow, UP</p>
+                                    <div class="skills">
+                                        <span class="skill-tag">UX/UI Design</span>
+                                        <span class="skill-tag">Stakeholder Management</span>
+                                        <span class="skill-tag">User Story Mapping</span>
+                                    </div>
+                                    <div class="actions">
+                                        <button class="btn btn-orange">Apply Now</button>
+                                        <button class="btn btn-secondary">Analyze Internship</button>
+                                        <button class="btn btn-secondary">All Resumes</button>
+                                    </div>
+                                </div>
+                                <div class="skill-match">
+                                    <div class="match-score">73%</div>
+                                    <div class="match-label">Skill Match</div>
+                                </div>
+                            </div>
+
+                            <div class="internship-card">
+                                <div class="company-logo orange"></div>
+                                <div class="internship-details">
+                                    <h3>Growth PM Intern</h3>
+                                    <p class="company">Kisyu tech • Remote</p>
+                                    <div class="skills">
+                                        <span class="skill-tag">A/B Testing</span>
+                                        <span class="skill-tag">Funnel Optimization</span>
+                                    </div>
+                                    <div class="actions">
+                                        <button class="btn btn-orange">Apply Now</button>
+                                        <button class="btn btn-secondary">Analyze Internship</button>
+                                    </div>
+                                </div>
+                                <div class="skill-match">
+                                    <div class="match-score">65%</div>
+                                    <div class="match-label">Skill Match</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Analysis Modal -->
+        <div id="analysisModal" class="analysis-modal-overlay">
+            <div class="analysis-modal-content">
+                <div class="analysis-modal-header">
+                    <h2>Internship Analysis Results</h2>
+                    <button class="analysis-modal-close">&times;</button>
+                </div>
+                <div class="analysis-modal-body">
+                    <!-- Current Skills and Lacking Skills Section -->
+                    <div class="skills-analysis">
+                        <div class="skills-section">
+                            <h3>Current Skills</h3>
+                            <div class="skills-list">
+                                <span class="skill-tag current">Product Strategy</span>
+                                <span class="skill-tag current">Market Research</span>
+                                <span class="skill-tag current">Problem Solving</span>
+                                <span class="skill-tag current">Agile Methodologies</span>
+                            </div>
+                        </div>
+                        
+                        <div class="skills-section">
+                            <h3>Lacking Skills</h3>
+                            <div class="skills-list">
+                                <span class="skill-tag lacking">Data Analysis</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Internship Information -->
+                    <div class="internship-info">
+                        <h3>Internship Details</h3>
+                        <ul>
+                            <li><strong>Title:</strong> Product Management Intern</li>
+                            <li><strong>Location:</strong> Bhopal, Madhya Pradesh</li>
+                            <li><strong>Stipend:</strong> ₹8,000 - ₹10,000 per month</li>
+                            <li><strong>Duration:</strong> 3 Months</li>
+                            <li><strong>Mode:</strong> On-site</li>
+                            <li><strong>Skill Match Score:</strong> <span class="match-highlight">75%</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Recommendations -->
+                    <div class="recommendations">
+                        <h3>Recommendations</h3>
+                        <div class="recommendation-item">
+                            <h4>🎯 Focus Areas</h4>
+                            <p>Strengthen your Data Analysis skills to increase your match score to 90%+</p>
+                        </div>
+                        <div class="recommendation-item">
+                            <h4>📚 Learning Resources</h4>
+                            <p>Consider taking online courses in Excel, SQL, or Python for data analysis</p>
+                        </div>
+                        <div class="recommendation-item">
+                            <h4>✅ Strengths</h4>
+                            <p>Your Product Strategy and Market Research skills are excellent matches for this role</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Internship Platform</h3>
+                    <p>Connecting talent with opportunities across India through innovative technology solutions.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="profile.html">Profile</a></li>
+                        <li><a href="my-journey.html">My Journey</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: support@internships.gov.in</p>
+                    <p>Phone: +91 11 1234 5678</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Internship Platform. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Login/Signup Modal -->
+    <div id="authModal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <div class="modal-form">
+                <h2 id="modalTitle">Sign In</h2>
+                <form id="authForm">
+                    <div class="form-group">
+                        <input type="text" id="username" placeholder="Username" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="password" placeholder="Password" required>
+                    </div>
+                    <div class="form-group" id="confirmPasswordGroup" style="display: none;">
+                        <input type="password" id="confirmPassword" placeholder="Confirm Password">
+                    </div>
+                    <button type="submit" class="btn btn-orange modal-submit">Login/Sign Up</button>
+                </form>
+                <p class="modal-terms">
+                    By using our service, you agree to these terms. You are responsible for your account and content. We are not liable for any damages or losses. This agreement is non-transferable.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - Internship Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- UX4G Map CDN -->
+    <script src="https://cdn.ux4g.gov.in/UX4G@2.0.8/js/ux4g-map.js"></script>
+    <script src="https://cdn.ux4g.gov.in/UX4G@2.0.8/js/ux4g-map-all.js"></script>
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="profile.html" class="nav-link active">Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="my-journey.html" class="nav-link">My Journey</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link">About Us</a>
+                    </li>
+                </ul>
+                <div class="nav-actions">
+                    <button class="btn btn-secondary">Sign In</button>
+                    <button class="btn btn-orange">Sign Up</button>
+                </div>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Profile Hero Section -->
+        <section class="profile-hero">
+            <div class="container">
+                <div class="profile-hero-content">
+                    <div class="profile-avatar-section">
+                        <div class="avatar-container">
+                            <div class="avatar-image">
+                                <svg width="60" height="60" viewBox="0 0 24 24" fill="none">
+                                    <path d="M20 21V19C20 17.9391 19.5786 16.9217 18.8284 16.1716C18.0783 15.4214 17.0609 15 16 15H8C6.93913 15 5.92172 15.4214 5.17157 16.1716C4.42143 16.9217 4 17.9391 4 19V21" stroke="#FF7A00" stroke-width="2"/>
+                                    <circle cx="12" cy="7" r="4" stroke="#FF7A00" stroke-width="2"/>
+                                </svg>
+                                <div class="avatar-upload-overlay">
+                                    <span>📷</span>
+                                </div>
+                            </div>
+                            <input type="file" id="avatarUpload" accept="image/*" style="display: none;">
+                        </div>
+                        <div class="profile-info">
+                            <h1 class="profile-name">Welcome Back!</h1>
+                            <p class="profile-subtitle">Complete your profile to unlock amazing internship opportunities</p>
+                            <div class="profile-completion">
+                                <div class="completion-bar">
+                                    <div class="completion-fill" style="width: 45%"></div>
+                                </div>
+                                <span class="completion-text">Profile 45% Complete</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Profile Form Section -->
+        <section class="profile-form-section">
+            <div class="container">
+                <div class="profile-tabs">
+                    <button class="tab-btn active" data-tab="personal">Personal Info</button>
+                    <button class="tab-btn" data-tab="skills">Skills & Experience</button>
+                    <button class="tab-btn" data-tab="documents">Documents</button>
+                </div>
+
+                <div class="profile-card">
+                    <!-- Personal Info Tab -->
+                    <div id="personal" class="tab-content active">
+                        <div class="tab-header">
+                            <h2>Personal Information</h2>
+                            <p>Tell us about yourself to help us match you with the perfect internship</p>
+                        </div>
+                        
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label class="form-label">
+                                    <span class="label-text">Full Name</span>
+                                    <span class="required">*</span>
+                                </label>
+                                <div class="input-wrapper">
+                                    <input type="text" class="form-input" id="fullName" placeholder="Enter your full name" required>
+                                    <div class="input-icon">👤</div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">
+                                    <span class="label-text">Email Address</span>
+                                    <span class="required">*</span>
+                                </label>
+                                <div class="input-wrapper">
+                                    <input type="email" class="form-input" id="email" placeholder="your.email@example.com" required>
+                                    <div class="input-icon">📧</div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">
+                                    <span class="label-text">Phone Number</span>
+                                    <span class="required">*</span>
+                                </label>
+                                <div class="input-wrapper">
+                                    <input type="tel" class="form-input" id="phone" placeholder="+91 98765 43210" required>
+                                    <div class="input-icon">📱</div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">
+                                    <span class="label-text">Date of Birth</span>
+                                    <span class="required">*</span>
+                                </label>
+                                <div class="input-wrapper">
+                                    <input type="date" class="form-input" id="dob" required>
+                                    <div class="input-icon">🎂</div>
+                                </div>
+                            </div>
+
+                            <div class="form-group full-width">
+                                <label class="form-label">
+                                    <span class="label-text">Current Address</span>
+                                    <span class="required">*</span>
+                                </label>
+                                <div class="input-wrapper">
+                                    <textarea class="form-input textarea" id="address" placeholder="Enter your complete address" rows="3" required></textarea>
+                                    <div class="input-icon">🏠</div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">
+                                    <span class="label-text">University/College</span>
+                                </label>
+                                <div class="input-wrapper">
+                                    <input type="text" class="form-input" id="university" placeholder="Your institution name">
+                                    <div class="input-icon">🎓</div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">
+                                    <span class="label-text">Course/Degree</span>
+                                </label>
+                                <div class="input-wrapper">
+                                    <select class="form-input" id="course">
+                                        <option value="">Select your course</option>
+                                        <option value="btech">B.Tech</option>
+                                        <option value="bsc">B.Sc</option>
+                                        <option value="bca">BCA</option>
+                                        <option value="mtech">M.Tech</option>
+                                        <option value="msc">M.Sc</option>
+                                        <option value="mca">MCA</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                    <div class="input-icon">📚</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Skills Tab -->
+                    <div id="skills" class="tab-content">
+                        <div class="tab-header">
+                            <h2>Skills & Experience</h2>
+                            <p>Showcase your skills to stand out from the crowd</p>
+                        </div>
+
+                        <div class="skills-section">
+                            <div class="form-group">
+                                <label class="form-label">
+                                    <span class="label-text">Technical Skills</span>
+                                </label>
+                                <div class="skills-input-container">
+                                    <div class="skills-display" id="skillsDisplay">
+                                        <span class="skill-tag">JavaScript <button class="remove-skill">×</button></span>
+                                        <span class="skill-tag">Python <button class="remove-skill">×</button></span>
+                                        <span class="skill-tag">React <button class="remove-skill">×</button></span>
+                                    </div>
+                                    <div class="skill-input-wrapper">
+                                        <input type="text" class="skill-input" id="skillInput" placeholder="Type a skill and press Enter">
+                                        <button type="button" class="add-skill-btn" onclick="addSkill()">Add</button>
+                                    </div>
+                                </div>
+                                <div class="skill-suggestions">
+                                    <span class="suggestion-label">Popular skills:</span>
+                                    <button type="button" class="skill-suggestion" onclick="addSkillFromSuggestion('HTML/CSS')">HTML/CSS</button>
+                                    <button type="button" class="skill-suggestion" onclick="addSkillFromSuggestion('Node.js')">Node.js</button>
+                                    <button type="button" class="skill-suggestion" onclick="addSkillFromSuggestion('Java')">Java</button>
+                                    <button type="button" class="skill-suggestion" onclick="addSkillFromSuggestion('SQL')">SQL</button>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">
+                                    <span class="label-text">Experience Level</span>
+                                </label>
+                                <div class="experience-levels">
+                                    <div class="experience-option">
+                                        <input type="radio" id="beginner" name="experience" value="beginner">
+                                        <label for="beginner" class="experience-label">
+                                            <div class="experience-icon">🌱</div>
+                                            <div class="experience-text">
+                                                <span class="experience-title">Beginner</span>
+                                                <span class="experience-desc">Less than 1 year</span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="experience-option">
+                                        <input type="radio" id="intermediate" name="experience" value="intermediate">
+                                        <label for="intermediate" class="experience-label">
+                                            <div class="experience-icon">🚀</div>
+                                            <div class="experience-text">
+                                                <span class="experience-title">Intermediate</span>
+                                                <span class="experience-desc">1-3 years</span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="experience-option">
+                                        <input type="radio" id="advanced" name="experience" value="advanced">
+                                        <label for="advanced" class="experience-label">
+                                            <div class="experience-icon">⭐</div>
+                                            <div class="experience-text">
+                                                <span class="experience-title">Advanced</span>
+                                                <span class="experience-desc">3+ years</span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">
+                                    <span class="label-text">Areas of Interest</span>
+                                </label>
+                                <div class="interest-grid">
+                                    <div class="interest-option">
+                                        <input type="checkbox" id="webdev" value="Web Development">
+                                        <label for="webdev" class="interest-label">💻 Web Development</label>
+                                    </div>
+                                    <div class="interest-option">
+                                        <input type="checkbox" id="mobile" value="Mobile Development">
+                                        <label for="mobile" class="interest-label">📱 Mobile Development</label>
+                                    </div>
+                                    <div class="interest-option">
+                                        <input type="checkbox" id="ai" value="AI/ML">
+                                        <label for="ai" class="interest-label">🤖 AI/Machine Learning</label>
+                                    </div>
+                                    <div class="interest-option">
+                                        <input type="checkbox" id="data" value="Data Science">
+                                        <label for="data" class="interest-label">📊 Data Science</label>
+                                    </div>
+                                    <div class="interest-option">
+                                        <input type="checkbox" id="cyber" value="Cybersecurity">
+                                        <label for="cyber" class="interest-label">🔒 Cybersecurity</label>
+                                    </div>
+                                    <div class="interest-option">
+                                        <input type="checkbox" id="cloud" value="Cloud Computing">
+                                        <label for="cloud" class="interest-label">☁️ Cloud Computing</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Documents Tab -->
+                    <div id="documents" class="tab-content">
+                        <div class="tab-header">
+                            <h2>Documents & Portfolio</h2>
+                            <p>Upload your documents to complete your application</p>
+                        </div>
+
+                        <div class="documents-grid">
+                            <div class="upload-card">
+                                <div class="upload-area" onclick="triggerFileUpload('resume')">
+                                    <div class="upload-icon">📄</div>
+                                    <h3>Resume/CV</h3>
+                                    <p>Upload your latest resume (PDF, DOC)</p>
+                                    <div class="upload-button">Choose File</div>
+                                </div>
+                                <input type="file" id="resume" accept=".pdf,.doc,.docx" style="display: none;">
+                                <div class="file-info" id="resumeInfo" style="display: none;">
+                                    <span class="file-name"></span>
+                                    <button class="remove-file" onclick="removeFile('resume')">×</button>
+                                </div>
+                            </div>
+
+                            <div class="upload-card">
+                                <div class="upload-area" onclick="triggerFileUpload('portfolio')">
+                                    <div class="upload-icon">🎨</div>
+                                    <h3>Portfolio</h3>
+                                    <p>Showcase your projects and work</p>
+                                    <div class="upload-button">Choose File</div>
+                                </div>
+                                <input type="file" id="portfolio" accept=".pdf,.zip,.rar" style="display: none;">
+                                <div class="file-info" id="portfolioInfo" style="display: none;">
+                                    <span class="file-name"></span>
+                                    <button class="remove-file" onclick="removeFile('portfolio')">×</button>
+                                </div>
+                            </div>
+
+                            <div class="upload-card">
+                                <div class="upload-area" onclick="triggerFileUpload('certificate')">
+                                    <div class="upload-icon">🏆</div>
+                                    <h3>Certificates</h3>
+                                    <p>Upload relevant certificates</p>
+                                    <div class="upload-button">Choose File</div>
+                                </div>
+                                <input type="file" id="certificate" accept=".pdf,.jpg,.png" multiple style="display: none;">
+                                <div class="file-info" id="certificateInfo" style="display: none;">
+                                    <span class="file-name"></span>
+                                    <button class="remove-file" onclick="removeFile('certificate')">×</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="portfolio-links">
+                            <div class="form-group">
+                                <label class="form-label">
+                                    <span class="label-text">GitHub Profile</span>
+                                </label>
+                                <div class="input-wrapper">
+                                    <input type="url" class="form-input" id="github" placeholder="https://github.com/yourusername">
+                                    <div class="input-icon">🐙</div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">
+                                    <span class="label-text">LinkedIn Profile</span>
+                                </label>
+                                <div class="input-wrapper">
+                                    <input type="url" class="form-input" id="linkedin" placeholder="https://linkedin.com/in/yourprofile">
+                                    <div class="input-icon">💼</div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">
+                                    <span class="label-text">Personal Website</span>
+                                </label>
+                                <div class="input-wrapper">
+                                    <input type="url" class="form-input" id="website" placeholder="https://yourwebsite.com">
+                                    <div class="input-icon">🌐</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Form Actions -->
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-secondary" onclick="resetForm()">Reset Form</button>
+                        <button type="button" class="btn btn-orange" onclick="saveProfile()">
+                            <span class="btn-icon">💾</span>
+                            Save Profile
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Internship Platform</h3>
+                    <p>Connecting talent with opportunities across India through innovative technology solutions.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="profile.html">Profile</a></li>
+                        <li><a href="my-journey.html">My Journey</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: support@internships.gov.in</p>
+                    <p>Phone: +91 11 1234 5678</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Internship Platform. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Login/Signup Modal -->
+    <div id="authModal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <div class="modal-form">
+                <h2 id="modalTitle">Sign In</h2>
+                <form id="authForm">
+                    <div class="form-group">
+                        <input type="text" id="username" placeholder="Username" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="password" placeholder="Password" required>
+                    </div>
+                    <div class="form-group" id="confirmPasswordGroup" style="display: none;">
+                        <input type="password" id="confirmPassword" placeholder="Confirm Password">
+                    </div>
+                    <button type="submit" class="btn btn-orange modal-submit">Login/Sign Up</button>
+                </form>
+                <p class="modal-terms">
+                    By using our service, you agree to these terms. You are responsible for your account and content. We are not liable for any damages or losses. This agreement is non-transferable.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+# Image files (screenshots and documentation)
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.bmp
+
+# Text files (documentation)
+*.txt
+
+# System files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE/Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Temporary files
+*.tmp
+*.temp
+
+# Logs
+*.log
+
+# Node modules (if you add them later)
+node_modules/
+
+# Backend folder (if it contains sensitive data)
+backend/
+
+# Cache
+.cache/
