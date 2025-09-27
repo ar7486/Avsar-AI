@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pro Dashboard - Internship Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- UX4G Map CDN -->
+    <script src="https://cdn.ux4g.gov.in/UX4G@2.0.8/js/ux4g-map.js"></script>
+    <script src="https://cdn.ux4g.gov.in/UX4G@2.0.8/js/ux4g-map-all.js"></script>
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="main-website.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="profile.html" class="nav-link">Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="my-journey.html" class="nav-link">My Journey</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="pro.html" class="nav-link active">Pro</a>
+                    </li>
+                </ul>
+                <div class="nav-actions">
+                    <button class="btn btn-secondary">Sign In</button>
+                    <button class="btn btn-orange">Sign Up</button>
+                </div>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content pro-dashboard">
+        <!-- Pro Dashboard Header -->
+        <section class="pro-hero">
+            <div class="pro-container">
+                <div class="pro-header-content">
+                    <div class="pro-title">
+                        <span class="pro-icon">⚡</span>
+                        <h1>Placement Readiness Dashboard</h1>
+                    </div>
+                    <p class="pro-subtitle">Your comprehensive career readiness analysis</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Overall Score Section -->
+        <section class="overall-score-section">
+            <div class="pro-container">
+                <div class="score-card main-score">
+                    <div class="score-content">
+                        <!-- Main Score Display -->
+                        <div class="score-main">
+                            <div class="score-badge">EXCELLENT</div>
+                            <h2 class="score-title">74%</h2>
+                            <p class="score-label">Overall Readiness Score</p>
+                            <div class="score-bar">
+                                <div class="score-progress" style="width: 74%"></div>
+                            </div>
+                        </div>
+                        
+                        <!-- Insights Grid -->
+                        <div class="score-insights">
+                            <div class="insights-header">
+                                <h3>Career Insights</h3>
+                            </div>
+                            <div class="insights-grid">
+                                <div class="insight-card">
+                                    <span class="insight-icon">🎯</span>
+                                    <div class="insight-content">
+                                        <h4>Career Focus</h4>
+                                        <p>Well-aligned with target roles</p>
+                                    </div>
+                                </div>
+                                <div class="insight-card">
+                                    <span class="insight-icon">📈</span>
+                                    <div class="insight-content">
+                                        <h4>Growth Potential</h4>
+                                        <p>High placement probability</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Next Steps -->
+                            <div class="next-steps">
+                                <div class="steps-header">
+                                    <span class="steps-icon">🚀</span>
+                                    <h4>Next Milestone</h4>
+                                </div>
+                                <p class="milestone-text">Reach 80% by improving interview skills</p>
+                                <div class="milestone-progress">
+                                    <div class="milestone-bar">
+                                        <div class="milestone-fill" style="width: 92.5%"></div>
+                                    </div>
+                                    <span class="milestone-percent">6% to go</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Detailed Scores Grid -->
+        <section class="detailed-scores-section">
+            <div class="pro-container">
+                <div class="scores-grid">
+                    <div class="score-card animate-card">
+                        <div class="score-icon career-icon">💼</div>
+                        <div class="score-details">
+                            <h3>78%</h3>
+                            <p>Career Readiness Score</p>
+                            <div class="mini-progress">
+                                <div class="mini-progress-bar" style="width: 78%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="score-card animate-card">
+                        <div class="score-icon resume-icon">📄</div>
+                        <div class="score-details">
+                            <h3>85%</h3>
+                            <p>Resume Score</p>
+                            <div class="mini-progress">
+                                <div class="mini-progress-bar" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="score-card animate-card">
+                        <div class="score-icon interview-icon">🎤</div>
+                        <div class="score-details">
+                            <h3>72%</h3>
+                            <p>Mock Interview Score</p>
+                            <div class="mini-progress">
+                                <div class="mini-progress-bar" style="width: 72%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="score-card animate-card">
+                        <div class="score-icon skills-icon">⚙️</div>
+                        <div class="score-details">
+                            <h3>60%</h3>
+                            <p>Skill Gaps Covered</p>
+                            <div class="mini-progress">
+                                <div class="mini-progress-bar" style="width: 60%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pro Tools Section -->
+        <section class="pro-tools-section">
+            <div class="pro-container">
+                <div class="section-header">
+                    <span class="section-icon">🛠️</span>
+                    <h2>Your Pro Tools</h2>
+                    <p>Advanced AI-powered features to accelerate your career</p>
+                </div>
+
+                <div class="tools-grid">
+                    <div class="tool-card animate-tool">
+                        <div class="tool-header">
+                            <div class="tool-icon ai-interview">🤖</div>
+                            <div class="tool-info">
+                                <h3>AI Interview Coach</h3>
+                                <p>Practice with AI-powered mock interviews</p>
+                            </div>
+                        </div>
+                        <button class="tool-btn primary-btn" onclick="startMockInterview()">
+                            <span class="btn-icon">▶️</span>
+                            Start Mock Interview
+                        </button>
+                    </div>
+
+                    <div class="tool-card animate-tool">
+                        <div class="tool-header">
+                            <div class="tool-icon ai-career">💬</div>
+                            <div class="tool-info">
+                                <h3>AI Career Chatbot</h3>
+                                <p>Get personalized career guidance</p>
+                            </div>
+                        </div>
+                        <div class="chatbot-preview">
+                            <div class="chat-input">
+                                <input type="text" placeholder="Ask me about your career path, skills, or internship strategy...">
+                            </div>
+                            <button class="tool-btn secondary-btn" onclick="openCareerChat()">
+                                💬 Ask
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="tool-card animate-tool">
+                        <div class="tool-header">
+                            <div class="tool-icon skill-insights">💡</div>
+                            <div class="tool-info">
+                                <h3>Advanced Skill Gap Insights</h3>
+                                <p>Detailed learning roadmaps</p>
+                            </div>
+                        </div>
+                        <button class="tool-btn success-btn" onclick="viewLearningPlan()">
+                            <span class="btn-icon">👁️</span>
+                            View My Learning Plan
+                        </button>
+                    </div>
+
+                    <div class="tool-card animate-tool">
+                        <div class="tool-header">
+                            <div class="tool-icon resume-builder">📝</div>
+                            <div class="tool-info">
+                                <h3>AI Resume Builder</h3>
+                                <p>Generate optimized resumes</p>
+                            </div>
+                        </div>
+                        <div class="upload-section">
+                            <div class="upload-icon">📤</div>
+                            <p class="upload-text">Upload your resume</p>
+                            <button class="tool-btn warning-btn" onclick="generateResume()">
+                                📄 Generate Resume
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="tool-card animate-tool">
+                        <div class="tool-header">
+                            <div class="tool-icon dashboard-icon">📊</div>
+                            <div class="tool-info">
+                                <h3>Placement Readiness Dashboard</h3>
+                                <p>Comprehensive readiness analysis</p>
+                            </div>
+                        </div>
+                        <button class="tool-btn info-btn" onclick="viewDetailedReport()">
+                            <span class="btn-icon">📈</span>
+                            View Detailed Report
+                        </button>
+                    </div>
+
+                    <div class="tool-card animate-tool">
+                        <div class="tool-header">
+                            <div class="tool-icon certificates">🏆</div>
+                            <div class="tool-info">
+                                <h3>Certificates & Badges</h3>
+                                <p>Showcase your achievements</p>
+                            </div>
+                        </div>
+                        <button class="tool-btn badge-btn" onclick="viewBadges()">
+                            <span class="btn-icon">🏅</span>
+                            View My Badges
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pro Benefits Section -->
+        <section class="pro-benefits-section">
+            <div class="pro-container">
+                <div class="benefits-card">
+                    <div class="benefits-grid">
+                        <div class="benefit-item">
+                            <div class="benefit-icon">📚</div>
+                            <div class="benefit-content">
+                                <h4>Personalized Learning</h4>
+                                <p>Custom roadmaps based on your profile</p>
+                            </div>
+                        </div>
+
+                        <div class="benefit-item">
+                            <div class="benefit-icon">⚡</div>
+                            <div class="benefit-content">
+                                <h4>AI-Powered Insights</h4>
+                                <p>Advanced analytics for career growth</p>
+                            </div>
+                        </div>
+
+                        <div class="benefit-item">
+                            <div class="benefit-icon">🎯</div>
+                            <div class="benefit-content">
+                                <h4>Interview Mastery</h4>
+                                <p>AI coach for interview success</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Internship Platform</h3>
+                    <p>Connecting talent with opportunities across India through innovative technology solutions.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="main-website.html">Home</a></li>
+                        <li><a href="profile.html">Profile</a></li>
+                        <li><a href="my-journey.html">My Journey</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="pro.html">Pro</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: support@internships.gov.in</p>
+                    <p>Phone: +91 11 1234 5678</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Internship Platform. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Login/Signup Modal -->
+    <div id="authModal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <div class="modal-form">
+                <h2 id="modalTitle">Sign In</h2>
+                <form id="authForm">
+                    <div class="form-group">
+                        <input type="text" id="username" placeholder="Username" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="password" placeholder="Password" required>
+                    </div>
+                    <div class="form-group" id="confirmPasswordGroup" style="display: none;">
+                        <input type="password" id="confirmPassword" placeholder="Confirm Password">
+                    </div>
+                    <button type="submit" class="btn btn-orange modal-submit">Login/Sign Up</button>
+                </form>
+                <p class="modal-terms">
+                    By using our service, you agree to these terms. You are responsible for your account and content. We are not liable for any damages or losses. This agreement is non-transferable.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script>
+        // Pro Dashboard Functionality
+        function startMockInterview() {
+            alert('Starting AI Mock Interview...\nThis feature will launch the interview practice session.');
+        }
+
+        function openCareerChat() {
+            alert('Opening AI Career Chatbot...\nYou can ask questions about career guidance and strategy.');
+        }
+
+        function viewLearningPlan() {
+            alert('Opening Learning Plan...\nViewing personalized skill development roadmap.');
+        }
+
+        function generateResume() {
+            alert('Generating AI-optimized resume...\nThis will create a tailored resume for your target roles.');
+        }
+
+        function viewDetailedReport() {
+            alert('Opening Detailed Report...\nComprehensive analysis of your placement readiness.');
+        }
+
+        function viewBadges() {
+            alert('Viewing Certificates & Badges...\nShowcasing your achievements and certifications.');
+        }
+
+        // Animation on scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            const animateCards = document.querySelectorAll('.animate-card, .animate-tool');
+            
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            animateCards.forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(30px)';
+                card.style.transition = 'all 0.6s ease';
+                observer.observe(card);
+            });
+
+            // Animate progress bars
+            setTimeout(() => {
+                const progressBars = document.querySelectorAll('.score-progress, .mini-progress-bar');
+                progressBars.forEach(bar => {
+                    bar.style.transition = 'width 1.5s ease-in-out';
+                    bar.style.width = bar.style.width;
+                });
+            }, 500);
+        });
+    </script>
+</body>
+</html>
