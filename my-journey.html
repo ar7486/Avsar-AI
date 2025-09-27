@@ -63,12 +63,105 @@
                         </div>
                     </div>
                     
-                    <div class="main-content-area">
-                        <div class="search-bar">
-                            <input type="text" placeholder="Search Internships...">
+                                            <div class="search-section">
+                            <div class="search-bar">
+                                <input type="text" placeholder="Search Internships..." id="searchInput">
+                                <button class="search-btn">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                        <path d="M21 21L16.514 16.506L21 21ZM18 10.5C18 15.194 14.194 19 9.5 19C4.806 19 1 15.194 1 10.5C1 5.806 4.806 2 9.5 2C14.194 2 18 5.806 18 10.5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            
+                            <div class="filters-container">
+                                <div class="filter-group">
+                                    <label for="stateFilter">State</label>
+                                    <select id="stateFilter" class="filter-select">
+                                        <option value="">All States</option>
+                                        <option value="andhra-pradesh">Andhra Pradesh</option>
+                                        <option value="arunachal-pradesh">Arunachal Pradesh</option>
+                                        <option value="assam">Assam</option>
+                                        <option value="bihar">Bihar</option>
+                                        <option value="chhattisgarh">Chhattisgarh</option>
+                                        <option value="goa">Goa</option>
+                                        <option value="gujarat">Gujarat</option>
+                                        <option value="haryana">Haryana</option>
+                                        <option value="himachal-pradesh">Himachal Pradesh</option>
+                                        <option value="jharkhand">Jharkhand</option>
+                                        <option value="karnataka">Karnataka</option>
+                                        <option value="kerala">Kerala</option>
+                                        <option value="madhya-pradesh" selected>Madhya Pradesh</option>
+                                        <option value="maharashtra">Maharashtra</option>
+                                        <option value="manipur">Manipur</option>
+                                        <option value="meghalaya">Meghalaya</option>
+                                        <option value="mizoram">Mizoram</option>
+                                        <option value="nagaland">Nagaland</option>
+                                        <option value="odisha">Odisha</option>
+                                        <option value="punjab">Punjab</option>
+                                        <option value="rajasthan">Rajasthan</option>
+                                        <option value="sikkim">Sikkim</option>
+                                        <option value="tamil-nadu">Tamil Nadu</option>
+                                        <option value="telangana">Telangana</option>
+                                        <option value="tripura">Tripura</option>
+                                        <option value="uttar-pradesh">Uttar Pradesh</option>
+                                        <option value="uttarakhand">Uttarakhand</option>
+                                        <option value="west-bengal">West Bengal</option>
+                                        <option value="delhi">Delhi</option>
+                                        <option value="mumbai">Mumbai</option>
+                                        <option value="bangalore">Bangalore</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="filter-group">
+                                    <label for="cityFilter">City</label>
+                                    <select id="cityFilter" class="filter-select">
+                                        <option value="">All Cities</option>
+                                        <option value="bhopal" selected>Bhopal</option>
+                                        <option value="indore">Indore</option>
+                                        <option value="gwalior">Gwalior</option>
+                                        <option value="jabalpur">Jabalpur</option>
+                                        <option value="ujjain">Ujjain</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="filter-group">
+                                    <label for="categoryFilter">Category</label>
+                                    <select id="categoryFilter" class="filter-select">
+                                        <option value="">All Categories</option>
+                                        <option value="technology">Technology</option>
+                                        <option value="marketing">Marketing</option>
+                                        <option value="finance">Finance</option>
+                                        <option value="design">Design</option>
+                                        <option value="sales">Sales</option>
+                                        <option value="operations">Operations</option>
+                                        <option value="hr">Human Resources</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="filter-group">
+                                    <label for="stipendFilter">Stipend Range</label>
+                                    <select id="stipendFilter" class="filter-select">
+                                        <option value="">Any Stipend</option>
+                                        <option value="0-5000">₹0 - ₹5,000</option>
+                                        <option value="5000-10000" selected>₹5,000 - ₹10,000</option>
+                                        <option value="10000-15000">₹10,000 - ₹15,000</option>
+                                        <option value="15000-25000">₹15,000 - ₹25,000</option>
+                                        <option value="25000+">₹25,000+</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="filter-actions">
+                                    <button class="apply-filters-btn" onclick="applyFilters()">Apply Filters</button>
+                                    <button class="clear-filters-btn" onclick="clearFilters()">Clear All</button>
+                                </div>
+                            </div>
                         </div>
                         
                         <h2>Recommended Internships</h2>
+                        <div class="results-count">
+                            <span id="resultsCount">4</span> internships found
+                        </div>
+                    </div>
                         
                         <div class="internship-cards">
                             <div class="internship-card">
@@ -283,5 +376,6 @@
     <script src="script.js"></script>
 </body>
 </html>
+
 
 
